@@ -17,7 +17,9 @@ public class Garagem extends javax.swing.JFrame {
     public Garagem() {
         initComponents();
     }
-
+    
+    Estante1BlocoA e1baFrame = new Estante1BlocoA();
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,6 +29,7 @@ public class Garagem extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         E1BE = new javax.swing.JButton();
         E1BF = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -72,6 +75,19 @@ public class Garagem extends javax.swing.JFrame {
         adicionarBtn = new javax.swing.JButton();
         retirarBtn = new javax.swing.JButton();
         procurarBtn = new javax.swing.JButton();
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,6 +150,11 @@ public class Garagem extends javax.swing.JFrame {
         E4BF.setText("4 BLOCO F");
 
         E1BA.setText("1 BLOCO A");
+        E1BA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E1BAMouseClicked(evt);
+            }
+        });
         E1BA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 E1BAActionPerformed(evt);
@@ -224,8 +245,8 @@ public class Garagem extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(adicionarBtn)
@@ -291,12 +312,12 @@ public class Garagem extends javax.swing.JFrame {
                             .addComponent(E6BD)
                             .addComponent(E6BE)
                             .addComponent(E6BF))))
-                .addGap(42, 42, 42))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(adicionarBtn)
                     .addComponent(retirarBtn)
@@ -387,7 +408,7 @@ public class Garagem extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(E1BF)
                             .addComponent(E2BF))))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -399,6 +420,9 @@ public class Garagem extends javax.swing.JFrame {
 
     private void E1BAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E1BAActionPerformed
         // TODO add your handling code here:
+        e1baFrame.setLocationRelativeTo(null);
+        e1baFrame.setVisible(true);
+        e1baFrame.setResizable(false);
     }//GEN-LAST:event_E1BAActionPerformed
 
     private void E1BBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E1BBActionPerformed
@@ -436,6 +460,10 @@ public class Garagem extends javax.swing.JFrame {
     private void E5BDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E5BDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_E5BDActionPerformed
+
+    private void E1BAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E1BAMouseClicked
+        
+    }//GEN-LAST:event_E1BAMouseClicked
 
     /**
      * @param args the command line arguments
@@ -510,6 +538,7 @@ public class Garagem extends javax.swing.JFrame {
     private javax.swing.JButton E6BE;
     private javax.swing.JButton E6BF;
     private javax.swing.JButton adicionarBtn;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
