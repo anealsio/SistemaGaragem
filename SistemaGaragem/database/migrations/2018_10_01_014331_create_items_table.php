@@ -18,8 +18,8 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->integer('quantity');
             $table->text('descripton');
-            $
-
+            $table->unsignedInteger('bucket_id');
+            $table->foreign('bucket_id')->references('id')->on('buckets')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
