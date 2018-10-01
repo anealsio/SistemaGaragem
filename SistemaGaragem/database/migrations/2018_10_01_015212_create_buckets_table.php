@@ -15,7 +15,11 @@ class CreateBucketsTable extends Migration
     {
         Schema::create('buckets', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->unsignedInteger('section_id');
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->timestamps();
+            $table->softDelets();
         });
     }
 
